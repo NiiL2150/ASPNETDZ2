@@ -1,0 +1,11 @@
+﻿@model Car
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div>
+    <img class="col-12 col-md-8 col-lg-4" src="@Model.CarImage.ToImage()" />
+    <h3>@Model.Title</h3>
+    <p>$@Model.Price</p>
+    <p>@Model.Description</p>
+</div>

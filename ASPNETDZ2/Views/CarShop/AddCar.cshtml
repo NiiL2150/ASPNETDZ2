@@ -1,0 +1,22 @@
+﻿@model Car
+@{
+    ViewData["Title"] = "Add car listing";
+}
+
+<div class="text-center">
+    <form asp-action="AddCar" asp-controller="CarShop" method="post" enctype="multipart/form-data">
+        <label asp-for="@Model.Title"></label>
+        <input asp-for="@Model.Title" />
+        <br />
+        <label asp-for="@Model.Description"></label>
+        <input asp-for="@Model.Description" />
+        <br />
+        <label asp-for="@Model.Price"></label>
+        <input type="number" asp-for="@Model.Price" />
+        <br />
+        <label asp-for="@Model.CarImage"></label>
+        <input type="file" name="imgfile" />
+        <br />
+        <button type="submit" name="Submit">Add</button>
+    </form>
+</div>
